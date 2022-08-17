@@ -1,4 +1,4 @@
-<table>
+<table cellpadding="0">
     <tbody>
         <% @questions.each do |question| %>
             <tr> 
@@ -6,7 +6,7 @@
                     </br><br>  
                     <% question.choices.each do |ch| %>
                         <ul>
-                            <input Type="radio" name="ch.choice_body" onclick="calculateScore"> <%= ch.choice_body %></input>
+                            <input Type="checkbox" name="ch.choice_body" onclick="calculateScore"> <%= ch.choice_body %></input>  <%= ch.choice_score %>
                         </ul>
                     <% end %>
                 </td>
