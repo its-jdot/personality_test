@@ -1,10 +1,17 @@
-<h1> <strong> Hello User ! </strong> </h1>
- 
-<h1> Welcome the Personality Test </h1>
 
-<h1> What Type of Personality You Have ? </h1>
+<div class="col-md-10 offset-md-1"> 
+    <div class="jumbotron">
+
+        <h1 class="display-10">Hello User !</h1>
+        <h3> Are you an extrovert, introvert or ambivert? </h3>
+        <p class="lead">Knowing your traits will help you figure out how you can best fit and function in the workplace and the world.</p>
+        <hr class="my-4">
+        <%= link_to 'Start Test', new_test_path, class:"btn btn-primary" %>
+        
+    </div>
+</div>
 
 
-<button>
-    <%= link_to 'Start Test', questions_index_path %>
-</button>
+
+
+

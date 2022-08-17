@@ -1,11 +1,16 @@
-<% if @question.errors.any? %>
-
-    <h2>
-
-<% end %>
-
-<%= form_with(model: @question, local, true) do |f| %>
-
-    <p>
-        form.select :
-    </p>
+<table>
+    <tbody>
+        <% @questions.each do |question| %>
+            <tr> 
+                <td> <%= question.question_body %> 
+                    </br><br>  
+                    <% question.choices.each do |ch| %>
+                        <ul>
+                            <input Type="radio" name="ch.choice_body" onclick="calculateScore"> <%= ch.choice_body %></input>
+                        </ul>
+                    <% end %>
+                </td>
+            </tr>   
+        <% end %>
+    </tbody>
+</table>

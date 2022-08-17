@@ -10,6 +10,7 @@ class TestsController < ApplicationController
 
   def new
     @test = Test.new
+    @questions = Question.all
   end
 
   def create 
